@@ -46,7 +46,7 @@ static const struct mtk_gate_regs audio1_cg_regs = {
 		.flags = CLK_IGNORE_UNUSED,		\
 	}
 
-static const struct mtk_gate audio_clks[] __initconst = {
+static const struct mtk_gate audio_clks[] = {
 	/* AUDIO0 */
 	GATE_AUDIO0(CLK_AUDIO_AFE, "aud_afe", "audio_ck",
 		2),
