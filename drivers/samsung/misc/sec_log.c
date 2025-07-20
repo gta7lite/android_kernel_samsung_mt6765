@@ -18,6 +18,7 @@
 #include <linux/memblock.h>
 #include <linux/sched/clock.h>
 #include <linux/sec_debug.h>
+#include <linux/pstore_ram.h>
 #include <linux/of.h>
 #include <linux/of_reserved_mem.h>
 #include <linux/vmalloc.h>

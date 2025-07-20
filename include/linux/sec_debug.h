@@ -617,7 +617,6 @@ extern void sec_debug_dump_info(void);
 extern void sec_upload_cause(void *buf);
 extern void sec_debug_check_crash_key(unsigned int code, int value);
 extern void register_log_text_hook(void (*f)(char *text, size_t size));
-extern void *persistent_ram_vmap(phys_addr_t start, size_t size, unsigned int memtype);
 #ifdef CONFIG_SEC_LOG_HOOK_PMSG
 extern int sec_log_hook_pmsg(char *buffer, size_t count);
 #else

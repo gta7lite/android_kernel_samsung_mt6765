@@ -69,6 +69,8 @@ struct persistent_ram_zone *persistent_ram_new(phys_addr_t start, size_t size,
 void persistent_ram_free(struct persistent_ram_zone *prz);
 void persistent_ram_zap(struct persistent_ram_zone *prz);
 
+extern void *persistent_ram_vmap(phys_addr_t start, size_t size, unsigned int memtype);
+
 int persistent_ram_write(struct persistent_ram_zone *prz, const void *s,
 			 unsigned int count);
 int persistent_ram_write_user(struct persistent_ram_zone *prz,
