@@ -246,11 +246,7 @@ struct mboot_params_buffer {
 #define REBOOT_REASON_SIG (0x43474244)	/* DBRR */
 static int FIQ_log_size = sizeof(struct mboot_params_buffer);
 
-#ifdef CONFIG_SEC_DEBUG
 struct mboot_params_buffer *mboot_params_buffer;
-#else
-static struct mboot_params_buffer *mboot_params_buffer;
-#endif
 static struct mboot_params_buffer *mboot_params_old;
 static struct mboot_params_buffer *mboot_params_buffer_pa;
 
