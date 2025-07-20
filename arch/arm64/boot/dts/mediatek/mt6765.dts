@@ -34,7 +34,7 @@
 page_owner=on \
 swiotlb=noforce androidboot.hardware=mt6765 \
 maxcpus=8 quiet noirqdebug nodebugmon loop.max_part=7 \
-firmware_class.path=/vendor/firmware";
+firmware_class.path=/vendor/firmware kpti=off";
 		kaslr-seed = <0 0>;
 	};
 
