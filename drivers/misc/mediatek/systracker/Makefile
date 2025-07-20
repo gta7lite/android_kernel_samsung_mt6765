@@ -10,5 +10,6 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 #
-
+ifneq ($(CONFIG_MTK_SYSTRACKER_DISABLE),y)
 obj-y += systracker_interface_v2.o
+endif
