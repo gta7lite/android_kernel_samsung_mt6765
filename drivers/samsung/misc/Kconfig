@@ -24,9 +24,16 @@ config SEC_DEVICE_BOOTSTAT
 	help
 	  Samsung TN Device Bootstat Feature.
 
+config SEC_LOG
+    bool "Enale Samsung logging"
+    default n
+    depends on SEC_EXT
+    help
+        Samsung Logging Feature.
+
 config SEC_LOG_HOOK_PMSG
 	bool "Enable hooking android platform log for ramdump"
-	depends on SEC_EXT && PSTORE_PMSG
+	depends on SEC_EXT && SEC_LOG && PSTORE_PMSG
 	default y
 	help
 	  This option enables hooking android platform log.
@@ -34,7 +41,7 @@ config SEC_LOG_HOOK_PMSG
 config SEC_AVC_LOG
 	default n
 	bool "Enable avc audit log support" if EMBEDDED
-	depends on SEC_EXT
+	depends on SEC_EXT && SEC_LOG
 	help
 	  This option enables additional log buffer for audit log.
 
@@ -60,4 +67,3 @@ config CABLE_TYPE_NOTIFIER
 	help
 	  If you say yes here you will get support for
 	  the CABLE TYPE status change notification.
-

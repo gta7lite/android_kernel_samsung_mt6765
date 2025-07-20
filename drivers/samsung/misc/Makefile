@@ -6,7 +6,7 @@
 # Licensed under GPLv2
 
 # Samsung Logging Feature
-obj-$(CONFIG_SEC_EXT)			+= sec_log.o
+obj-$(CONFIG_SEC_LOG)			+= sec_log.o
 # Samsung Bootstat Feature
 obj-$(CONFIG_SEC_BOOTSTAT)		+= sec_bootstat.o
 # Samsung NAD Feature
