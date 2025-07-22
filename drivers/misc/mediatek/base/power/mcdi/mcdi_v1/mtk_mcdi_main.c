@@ -164,7 +164,7 @@ static void mcdi_stress_start(void)
 	mcdi_stress_en = true;
 
 	for (i = 0; i < NF_CPU; i++) {
-		snprintf(name, sizeof(name), "mcdi_stress_task%d", i);
+		scnprintf(name, sizeof(name), "mcdi_stress_task%d", i);
 
 		mcdi_stress_tsk[i] =
 			kthread_create(mcdi_stress_task, NULL, name);
