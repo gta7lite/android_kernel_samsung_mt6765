@@ -161,7 +161,7 @@ static ssize_t macaddr_store(
 	uint8_t aucMacAddrTemp[] = "FF:FF:FF:FF:FF:FF";
 
 	kalMemCopy(&aucMacAddrTemp, buf, sizeof(aucMacAddrTemp));
-	i4Ret = sscanf((uint8_t *)&aucMacAddrTemp, "%19s",
+	i4Ret = sscanf((uint8_t *)&aucMacAddrTemp, "%s",
 		(uint8_t *)&aucMacAddrOverride);
 
 	if (!i4Ret)
